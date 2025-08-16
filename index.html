@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>LiveWeather</title>
+</head>
+
+<body>
+    <video id="weatherVideo" autoplay muted loop playsinline>
+        <source src="./video/sunny.mp4" type="video/mp4">
+    </video>
+    <h1>Live Weather</h1>
+    
+    <div class="form-conteiner">
+    <input type="text" id="city" placeholder="Enter your city">
+    <button onclick="getWeather()">Show Weather</button>
+    </div>
+    <div class="tabs">
+        <button onclick="getWeather('current')">Today</button>
+        <button onclick="getWeather('3days')">3 Days</button>
+        <button onclick="getWeather('week')">Week</button>
+    </div>
+    <div id="weather"></div>
+
+    <video autoplay muted loop id="weatherVideo" class="bg-video">
+    <source src="sunny.mp4" type="video/mp4">
+</video>
+
+<script src="weather.js"></script>
+
+    <video autoplay muted loop id="weatherVideo" style="position:fixed;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;">
+    <source src="videos/sunny.mp4" type="video/mp4">
+</video>
+</body>
+</html>
